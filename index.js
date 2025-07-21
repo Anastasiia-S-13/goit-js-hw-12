@@ -1,13 +1,13 @@
-import{a as p,S as h,i as n}from"./assets/vendor-DRgUjrIE.js";(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const o of t.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function a(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=a(e);fetch(e.href,t)}})();const L="51396657-6a58d607ccd7d0682078fb53f";p.defaults.baseURL="https://pixabay.com/api/";async function S(r,s){const a=new URLSearchParams({limit,page:s});return(await p.get(`?key=${L}&q=${r}&per_page=9&image_type=photo&orientation=horizontal&safesearch&${a}`)).data}let c;function b(r){const s=r.map(({webformatURL:a,largeImageURL:i,tags:e,likes:t,views:o,comments:f,downloads:g,id:y})=>`
+import{a as p,S as h,i as n}from"./assets/vendor-DRgUjrIE.js";(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&o(i)}).observe(document,{childList:!0,subtree:!0});function a(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=a(e);fetch(e.href,t)}})();const L="51396657-6a58d607ccd7d0682078fb53f";p.defaults.baseURL="https://pixabay.com/api/";async function S(r,s){const a=new URLSearchParams({per_page,page:s});return(await p.get(`?key=${L}&q=${r}&image_type=photo&orientation=horizontal&safesearch&${a}`)).data}let c;function b(r){const s=r.map(({webformatURL:a,largeImageURL:o,tags:e,likes:t,views:i,comments:f,downloads:g,id:y})=>`
         <li class="list-item">
-            <a class="list-link" href="${i}">
+            <a class="list-link" href="${o}">
                 <img data-id="${y}" class="image-item" alt="${e}" src="${a}">
                 <ul class="description">
                         <li class="desc-item">
                             <p class="figcaption">Likes<span class="caption-span">${t}</span></p>
                         </li>
                         <li class="desc-item">
-                            <p class="figcaption">Views<span class="caption-span">${o}</span></p>
+                            <p class="figcaption">Views<span class="caption-span">${i}</span></p>
                         </li>
                         <li class="desc-item">
                             <p class="figcaption">Comments<span class="caption-span">${f}</span></p>
