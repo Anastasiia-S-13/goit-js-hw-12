@@ -1,4 +1,4 @@
-import { list, loader, } from "../main"; 
+import { list, loader, btnLoadMore } from "../main"; 
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
@@ -28,7 +28,7 @@ export function createGallery(images) {
         </li>
         `
     }).join("");
-    list.innerHTML = galleryMarkup;
+    list.insertAdjacentHTML("beforeend", galleryMarkup);
     if (lightbox) {
                 lightbox.refresh();
             } else {
@@ -57,5 +57,9 @@ export function hideLoader() {
     loader.classList.add("hidden");
 }
 
-// showLoadMoreButton()
-// hideLoadMoreButton()
+export function showLoadMoreButton() {
+    btnLoadMore.classList.remove("hidden");
+}
+export function hideLoadMoreButton() {
+    btnLoadMore.classList.add("hidden");
+}
